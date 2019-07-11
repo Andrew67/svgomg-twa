@@ -17,12 +17,12 @@
 apply plugin: 'com.android.application'
 
 def twaManifest = [
-    applicationId: 'org.chromium.twa.svgomg',
-    hostName: 'svgomg.firebaseapp.com', // The domain being opened in the TWA.
+    applicationId: 'com.andrew67.ddrcalc',
+    hostName: 'ddrcalc.andrew67.com', // The domain being opened in the TWA.
     launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
-    name: 'SVGOMG TWA', // The name shown on the Android Launcher.
-    themeColor: '#303F9F', // The color used for the status bar.
-    backgroundColor: '#bababa', // The color used for the splash screen background.
+    name: 'DDR Calc', // The name shown on the Android Launcher.
+    themeColor: '#263238', // The color used for the status bar.
+    backgroundColor: '#263238', // The color used for the splash screen background.
     enableNotifications: false // Set to true to enable notification delegation
 ]
 
@@ -30,10 +30,10 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId twaManifest.applicationId
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 28
-        versionCode 3
-        versionName "1.1.1"
+        versionCode 1
+        versionName "3.1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         // The name for the application on the Android Launcher
