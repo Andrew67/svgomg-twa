@@ -21,7 +21,7 @@ def twaManifest = [
     hostName: 'ddrcalc.andrew67.com', // The domain being opened in the TWA.
     launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
     name: 'DDR Calc', // The name shown on the Android Launcher.
-    themeColor: '#263238', // The color used for the status bar.
+    themeColor: '#ffffff', // The color used for the status bar.
     backgroundColor: '#263238', // The color used for the splash screen background.
     enableNotifications: false // Set to true to enable notification delegation
 ]
@@ -32,8 +32,8 @@ android {
         applicationId twaManifest.applicationId
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 1
-        versionName "3.1.0"
+        versionCode 2
+        versionName "3.2.0"
         resConfigs "en"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -90,5 +90,5 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.github.GoogleChrome.custom-tabs-client:customtabs:7a2c1374a3'
+    implementation 'com.github.GoogleChrome.custom-tabs-client:customtabs:91b4a1270b'
 }
