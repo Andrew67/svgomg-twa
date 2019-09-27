@@ -23,7 +23,8 @@ def twaManifest = [
     name: 'DDR Calc', // The name shown on the Android Launcher.
     themeColor: '#ffffff', // The color used for the status bar.
     backgroundColor: '#263238', // The color used for the splash screen background.
-    enableNotifications: false // Set to true to enable notification delegation
+    enableNotifications: false, // Set to true to enable notification delegation.
+    useBrowserOnChromeOS: true // Set to false if you've added interaction with Android system APIs.
 ]
 
 android {
@@ -72,6 +73,11 @@ android {
         // TrustedWebActivityService, by changing the android:enabled and android:exported
         // attributes
         resValue "bool", "enableNotification", twaManifest.enableNotifications.toString()
+
+        // The useBrowserOnChromeOS resources is used to enable or disable ChromeOS support for this
+        // TWA. When enabled, it causes the web app to be installed as a Desktop PWA on ChromeOS
+        // but does not provide any native Android interaction.
+        resValue "bool", "useBrowserOnChromeOS", twaManifest.useBrowserOnChromeOS.toString()
     }
     buildTypes {
         release {
