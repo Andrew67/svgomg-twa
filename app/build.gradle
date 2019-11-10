@@ -23,7 +23,7 @@ def twaManifest = [
     hostName: 'ddrcalc.andrew67.com', // The domain being opened in the TWA.
     launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
     name: 'DDR Calc', // The name shown on the Android Launcher.
-    themeColor: '#ffffff', // The color used for the status bar.
+    themeColor: '#263238', // The color used for the status bar.
     backgroundColor: '#263238', // The color used for the splash screen background.
     enableNotifications: false, // Set to true to enable notification delegation.
     useBrowserOnChromeOS: true, // Set to false if you've added interaction with Android system APIs.
@@ -47,7 +47,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 3
-        versionName "3.3.0"
+        versionName "3.2.2"
         resConfigs "en"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
