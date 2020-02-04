@@ -46,8 +46,8 @@ android {
         applicationId twaManifest.applicationId
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 3
-        versionName "3.2.2"
+        versionCode 4
+        versionName "3.2.3"
         resConfigs "en"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
