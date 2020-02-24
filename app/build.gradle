@@ -35,6 +35,8 @@ def twaManifest = [
     shortcuts: [
         // Insert shortcuts here, for example:
         // [name: 'Open SVG', short_name: 'Open', url: '/open', icon: 'splash']
+        [name: 'Speed Mod', short_name: 'Speed Mod', url: '/#speed-mod', icon: 'ic_speed_mod'],
+        [name: 'Target BPM', short_name: 'Target BPM', url: '/#target-bpm', icon: 'ic_target_bpm']
     ],
     // The duration of fade out animation in milliseconds to be played when removing splash screen.
     splashScreenFadeOutDuration: 300
@@ -47,7 +49,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 4
-        versionName "3.2.3"
+        versionName "3.3.0"
         resConfigs "en"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -146,7 +148,7 @@ task generateShorcutsFile {
                 'shortcut'(
                         'android:shortcutId': 'shortcut' + i,
                         'android:enabled': 'true',
-                        'android:icon': '@drawable/' + s.icon,
+                        'android:icon': '@mipmap/' + s.icon,
                         'android:shortcutShortLabel': '@string/shortcut_short_name_' + i,
                         'android:shortcutLongLabel': '@string/shortcut_name_' + i) {
                     'intent'(
